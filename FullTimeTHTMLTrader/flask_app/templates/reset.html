@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<form action="/reset" method="post" class="form-reset">
+    <h1>You'd like to reset your password</h1>
+    <label for="password">New Password</label>
+    <input name="pword" type="text" id="new_pw" placeholder="Enter Here">
+    <label for="confirm_pw">Confirm Password</label>
+    <input name="pword_confirm" type="text" id="pword_confirm" placeholder="Enter Here">
+    <button type="submit">Submit</button>
+</form>
+<br>
+{{message}}
+<br>
+<a href="{{url_for('dashboard')}}">Return to the Main Menu</a>

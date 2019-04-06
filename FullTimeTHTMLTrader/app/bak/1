@@ -1,0 +1,34 @@
+from orm import ORM
+from tests.setup_test import schema, Example
+import unittest
+import sqlite3
+
+
+class TestORM(unittest.TestCase):
+
+    def setUp(self):
+        schema()
+    
+    def tearDown(self):
+        pass
+
+    def testInsert(self):
+        testobject = Example()
+        testobject.employee_id = 100
+        testobject.name = "Carter"
+        testobject.salary = 19000.00
+        testobject.save()
+
+        with sqlite3.connect(Example.database) as conn:
+            cur = conn.cursor()
+            SQL = "SELECT * FROM {} WHERE name = ?;".format(Example.table)
+            cur.execute(SQL, ("Carter",))
+            result = cur.fetchone()
+
+            self.assertIsNotNone(result, ".save puts an entry into the database")
+
+    def testSelectOne(self):
+        testobject = Example.select_one("WHERE name=?;", ('jack',))
+        self.assertIsNotNone(testobject.pk)
+    
+     

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{{error}}
+<form action="/sell" method="post" class="form-sell">
+    <h1>You'd like to sell shares</h1>
+    <label for="ticker">Ticker</label>
+    <input name="tick_sell" type="text" id="ticker" placeholder="Ticker">
+    <label for="shares"># of Shares</label>
+    <input name="shareno_sell" type="shares" id="shares" placeholder="shares">
+    <button type="submit">Submit</button>
+</form>
+<br>
+{{ message }}
+<br>
+<a href="{{url_for('dashboard')}}">Return to the Main Menu</a>

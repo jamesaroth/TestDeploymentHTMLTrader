@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<form action="/price" method="post" class="form-ticker">
+    <h1>You'd like the price of a stock</h1>
+    <label for="ticker">Ticker</label>
+    <input name="ticker" type="text" id="ticker" placeholder="Ticker">
+    <button type="submit">Submit</button>
+</form><br>
+
+{{ message }}
+<br>
+<a href="{{url_for('dashboard')}}">Return to the Main Menu</a>

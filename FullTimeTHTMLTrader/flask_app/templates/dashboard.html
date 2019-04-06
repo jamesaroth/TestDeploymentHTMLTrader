@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h1>Welcome {{Username}}!  Please choose from the following options below:</h1>
+<ul>
+<li><a href="{{url_for('balance')}}">View Account Balance & API Key</a></li>
+<li><a href="{{url_for('price')}}">Look up Current Trading Price of a Stock</a></li>
+<li><a href="{{url_for('deposit')}}">Deposit Funds</a></li>
+<li><a href="{{url_for('buy')}}">Buy a Stock</a></li>
+<li><a href="{{url_for('sell')}}">Sell a Stock</a></li>
+<li><a href="{{url_for('positions')}}">View Stock Holding Details</a></li>
+<li><a href="{{url_for('trades')}}">View Detailed Trade History</a></li>
+<li><a href="{{url_for('reset')}}">Reset Password</a></li>
+<li><a href="{{url_for('logout')}}">Logout</a></li>
+</ul>

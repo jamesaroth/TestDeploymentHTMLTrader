@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<form action="/deposit" method="post" class="form-deposit">
+    <h1>You'd like to deposit $$$</h1>
+    <h2>
+        {{amt1}}
+    </h2><br>
+    <h2>
+        {{balance}}
+    </h2><br>
+    <label for="deposit">Deposit Amount</label>
+    <input name="deposit_amount" type="text" id="deposit" placeholder="Enter Amount">
+    <button type="submit">Submit</button>
+</form>
+<br>
+<a href="{{url_for('dashboard')}}">Return to the Main Menu</a>
